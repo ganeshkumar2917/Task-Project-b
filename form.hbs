@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon copy.png"/>
+    <meta name="theme-color" content="#000FFF" />
+    <title>beleaf_Technologies</title>
+    <style>
+    body{
+           box-sizing: border-box;
+           justify-content: center;
+           min-height: 100vh;
+           display: flex;
+            font-weight: 400;
+           font-family: "Fira Sans", sans-serif;
+           background-image: url(https://res.cloudinary.com/blf/image/upload/v1689228230/yfhgtgi2klqqhgyrw5bi.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+    
+        }
+        .auth-wrapper {
+        display: flex;
+         justify-content: center;
+          flex-direction: column;
+           text-align: center;
+         }
+         .auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffffda;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+form input{
+    padding-top: 5px;
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+}
+.custom-control-label{
+    padding-top: 5px;
+    margin-top: 30px;
+}
+.custom-checkbox{
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 40%;
+}
+.d-grid{
+  background-color: #00204b;
+  color:beige;
+  height: 30px;
+  width: 50%;
+  margin-top: 5px;
+}
+.d-grid:hover{
+  background-color: #004cb0;
+  color:rgb(0, 0, 0);
+}
+.hook{
+    margin-top: 30px;
+    padding-top:25px ;
+    text-decoration: none;
+}
+.gender{
+    display: flex;
+}
+.gender label{
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+.gender input{
+    height: 25px;
+}
+.gender {
+    height: 20px;
+}
+.lang{
+    text-align: center;
+    margin-top: 25px;
+    align-items: flex-start;
+}
+.lang option{
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    margin-top: 25px;
+    align-items: flex-start;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-inner">
+    <form action="./biodata.hbs" method="post" enctype="multipart/form-data">
+    <h1>Add Your Details</h1>
+    <input type="text" name="username" placeholder="Enter your Name"><br>
+   <input type="date" name="dob" placeholder="Enter your Date Of Birth"><br>
+  <input type="text" name="qualification" placeholder="Enter your Qualification"><br>
+     <input type="email" name="mailid" placeholder="Enter your email"><br>
+     <div class="gender"> 
+     <label for="gender">Gender</label>
+     <input type="radio" name="gender"><h4>Male</h4>
+     <input type="radio" name="gender"><h4>FeMale</h4>
+     <input type="radio" name="gender"><h4>Others</h4><br>
+     </div>
+     <br>
+     <div class="lang">
+        <h4>Select your known language</h4>
+        <select name="languages" multiple>
+        <option value="tamil">tamil</option>
+        <option value="kannada">kannada</option>
+        <option value="telugu">telugu</option>
+        </select>
+     </div>
+     <input type="text" name="pno" placeholder="Enter your Phone Number"><br>
+    <input type="file" name="uploadfile"  placeholder="Upload your Aadhaar card or Legalcard"><br>
+    <input type="submit" class="d-grid"><br> 
+    <a href="./biodata.hbs" class="hook">Check your details</a>
+    <marquee>Note:Once your Detail Entered Doesn't Modify.(please Enter Carefully) </marquee>
+</form>
+        </div>
+    </div>
+
+</body>
+</html>
